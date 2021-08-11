@@ -9,6 +9,11 @@ interface MessageData {
   senderName?: string;
 }
 
+interface FileInfo {
+  fileName: string;
+  contentType: string;
+  key: string;
+}
 export default class Message {
   /**
    * Message object for organizing and storing current message data.
@@ -16,6 +21,7 @@ export default class Message {
   id: number | string;
   message: string;
   senderName?: string;
+  files?: FileInfo[]
   constructor(messageData: MessageData) {
     this.id = messageData.id; // id of the sender (0 is reserved for "blue bubble")
     this.message = messageData.message;
