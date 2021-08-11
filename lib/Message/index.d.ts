@@ -2,6 +2,7 @@ interface MessageData {
     id: number | string;
     message: string;
     senderName?: string;
+    files?: FileInfo[];
 }
 interface FileInfo {
     fileName: string;
