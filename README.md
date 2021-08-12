@@ -50,7 +50,7 @@ render() {
           text: {
             fontSize: 30
           },
-          chatbubble: {
+          chatBubble: {
             borderRadius: 70,
             padding: 40
           }

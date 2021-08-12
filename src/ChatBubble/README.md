@@ -10,7 +10,7 @@ The `ChatBubble` component basically just turns a given string into chat bubble.
 ```javascript
 bubbleStyles={{
   userBubble: object
-  chatbubble: object
+  chatBubble: object
   text: object
 }}
 ```

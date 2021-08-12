@@ -3,7 +3,7 @@ export default interface ChatBubbleProps {
     message: Message;
     bubbleStyles: {
         userBubble: object;
-        chatbubble: object;
+        chatBubble: object;
         text: object;
     };
     bubblesCentered: boolean;

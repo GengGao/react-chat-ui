@@ -294,7 +294,7 @@ var BubbleGroup = (function (_super) {
         var messageNodes = messages.map(function (message, i) {
             return (React.createElement(ChatBubble, { key: i, message: message, bubblesCentered: bubblesCentered, bubbleStyles: bubbleStyles }));
         });
-        return (React.createElement("div", { style: styles_1.default.chatbubbleWrapper },
+        return (React.createElement("div", { style: styles_1.default.chatBubbleWrapper },
             showSenderName &&
                 ((senderName || sampleMessage.senderName) !== '' &&
                     (sampleMessage.id !== 0 && (React.createElement("h5", { style: styles_1.default.bubbleGroupHeader }, senderName || sampleMessage.senderName)))),
@@ -312,7 +312,7 @@ exports.default = BubbleGroup;
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
-    chatbubbleWrapper: {
+    chatBubbleWrapper: {
         marginTop: 10,
         marginBottom: 10,
         overflow: 'auto',
@@ -357,7 +357,7 @@ var React = require("react");
 var styles_1 = require("./styles");
 var defaultBubbleStyles = {
     userBubble: {},
-    chatbubble: {},
+    chatBubble: {},
     text: {},
 };
 var ChatBubble = (function (_super) {
@@ -369,12 +369,12 @@ var ChatBubble = (function (_super) {
         var bubblesCentered = this.props.bubblesCentered;
         var bubbleStyles = this.props.bubbleStyles;
         bubbleStyles = bubbleStyles || defaultBubbleStyles;
-        var userBubble = bubbleStyles.userBubble, chatbubble = bubbleStyles.chatbubble, text = bubbleStyles.text;
+        var userBubble = bubbleStyles.userBubble, chatBubble = bubbleStyles.chatBubble, text = bubbleStyles.text;
         var chatBubbleStyles = this.props.message.id === 0
-            ? __assign({}, styles_1.default.chatbubble, bubblesCentered ? {} : styles_1.default.chatbubbleOrientationNormal, chatbubble, userBubble) : __assign({}, styles_1.default.chatbubble, styles_1.default.recipientChatbubble, bubblesCentered
+            ? __assign({}, styles_1.default.chatBubble, bubblesCentered ? {} : styles_1.default.chatBubbleOrientationNormal, chatBubble, userBubble) : __assign({}, styles_1.default.chatBubble, styles_1.default.recipientChatBubble, bubblesCentered
             ? {}
-            : styles_1.default.recipientChatbubbleOrientationNormal, chatbubble, userBubble);
-        return (React.createElement("div", { style: __assign({}, styles_1.default.chatbubbleWrapper) },
+            : styles_1.default.recipientChatBubbleOrientationNormal, chatBubble, userBubble);
+        return (React.createElement("div", { style: __assign({}, styles_1.default.chatBubbleWrapper) },
             React.createElement("div", { style: chatBubbleStyles },
                 React.createElement("p", { style: __assign({}, styles_1.default.p, text) }, this.props.message.message))));
     };
@@ -386,10 +386,10 @@ exports.default = ChatBubble;
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
-    chatbubbleWrapper: {
+    chatBubbleWrapper: {
         overflow: 'auto',
     },
-    chatbubble: {
+    chatBubble: {
         backgroundColor: '#0084FF',
         borderRadius: 20,
         marginTop: 1,
@@ -403,13 +403,13 @@ exports.default = {
         paddingRight: 14,
         width: '-webkit-fit-content',
     },
-    chatbubbleOrientationNormal: {
+    chatBubbleOrientationNormal: {
         float: 'right',
     },
-    recipientChatbubble: {
+    recipientChatBubble: {
         backgroundColor: '#ccc',
     },
-    recipientChatbubbleOrientationNormal: {
+    recipientChatBubbleOrientationNormal: {
         float: 'left',
     },
     p: {
@@ -484,7 +484,7 @@ var ChatFeed = (function (_super) {
             return null;
         });
         if (isTyping) {
-            messageNodes.push(React.createElement("div", { key: "isTyping", style: __assign({}, styles_1.default.chatbubbleWrapper) },
+            messageNodes.push(React.createElement("div", { key: "isTyping", style: __assign({}, styles_1.default.chatBubbleWrapper) },
                 React.createElement(ChatBubble, { message: new Message_1.default({ id: 1, message: '...', senderName: '' }), bubbleStyles: bubbleStyles })));
         }
         return messageNodes;
@@ -515,7 +515,7 @@ exports.default = {
         overflow: 'hidden',
     },
     chatHistory: { overflow: 'auto' },
-    chatbubbleWrapper: {
+    chatBubbleWrapper: {
         marginTop: 10,
         marginBottom: 10,
         overflow: 'auto',
@@ -15135,7 +15135,7 @@ function insertNonHydratedInstance(returnFiber, fiber) {
               didNotFindHydratableContainerTextInstance(parentContainer, text);
               break;
             case SuspenseComponent:
-              
+
               break;
           }
           break;
