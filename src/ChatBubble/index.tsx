@@ -49,10 +49,14 @@ export default class ChatBubble extends React.Component {
         <div style={chatBubbleStyles}>
           <p style={{ ...styles.p, ...text }}>{this.props.message.message}</p>
           {this.props.message.files && <ul>{this.props.message.files.map((file) => {
-            return <li><a href="#" onClick={(e) => {
+            return <li>
+              <a href="#" onClick={(e) => {
               e.preventDefault();
-              if(callback) callback(file);
-            }}></a>{file.fileName}</li>
+              if(callback) {
+                callback(file);
+              }
+            }}>{file.fileName}</a>
+            </li>;
           })}</ul>}
         </div>
       </div>
