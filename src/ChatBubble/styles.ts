@@ -1,8 +1,8 @@
 export default {
-  chatbubbleWrapper: {
+  chatBubbleWrapper: {
     overflow: 'auto',
   },
-  chatbubble: {
+  chatBubble: {
     backgroundColor: '#0084FF',
     borderRadius: 20,
     marginTop: 1,
@@ -16,13 +16,13 @@ export default {
     paddingRight: 14,
     width: '-webkit-fit-content',
   },
-  chatbubbleOrientationNormal: {
+  chatBubbleOrientationNormal: {
     float: 'right',
   },
-  recipientChatbubble: {
+  recipientChatBubble: {
     backgroundColor: '#ccc',
   },
-  recipientChatbubbleOrientationNormal: {
+  recipientChatBubbleOrientationNormal: {
     float: 'left',
   },
   p: {

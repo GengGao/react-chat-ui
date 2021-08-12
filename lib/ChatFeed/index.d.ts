@@ -10,6 +10,7 @@ interface ChatFeedInterface {
         messages: any;
         showSenderName?: boolean;
         chatBubble?: React.Component;
+        callback?: any;
     };
 }
 export default class ChatFeed extends React.Component {

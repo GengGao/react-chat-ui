@@ -22,6 +22,7 @@ export default class BubbleGroup extends React.Component {
       showSenderName,
       chatBubble,
       senderName,
+      callback,
     } = this.props;
     const ChatBubble = chatBubble || DefaultChatBubble;
     const sampleMessage = messages[0];
@@ -33,12 +34,13 @@ export default class BubbleGroup extends React.Component {
           message={message}
           bubblesCentered={bubblesCentered}
           bubbleStyles={bubbleStyles}
+          callback={callback}
         />
       );
     });
 
     return (
-      <div style={styles.chatbubbleWrapper}>
+      <div style={styles.chatBubbleWrapper}>
         {showSenderName &&
           ((senderName || sampleMessage.senderName) !== '' &&
             (sampleMessage.id !== 0 && (

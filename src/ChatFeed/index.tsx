@@ -20,6 +20,7 @@ interface ChatFeedInterface {
     messages: any;
     showSenderName?: boolean;
     chatBubble?: React.Component;
+    callback?: any;
   };
 }
 
@@ -55,7 +56,7 @@ export default class ChatFeed extends React.Component {
    * Determines what type of message/messages to render.
    */
   renderMessages(messages: [Message]) {
-    const { isTyping, bubbleStyles, chatBubble, showSenderName } = this.props;
+    const { isTyping, bubbleStyles, chatBubble, showSenderName, callback } = this.props;
 
     const ChatBubble = chatBubble || DefaultChatBubble;
 
@@ -75,6 +76,7 @@ export default class ChatFeed extends React.Component {
             showSenderName={showSenderName}
             chatBubble={ChatBubble}
             bubbleStyles={bubbleStyles}
+            callback={callback}
           />
         );
       }
@@ -85,7 +87,7 @@ export default class ChatFeed extends React.Component {
     // Other end is typing...
     if (isTyping) {
       messageNodes.push(
-        <div key="isTyping" style={{ ...styles.chatbubbleWrapper }}>
+        <div key="isTyping" style={{ ...styles.chatBubbleWrapper }}>
           <ChatBubble
             message={new Message({ id: 1, message: '...', senderName: '' })}
             bubbleStyles={bubbleStyles}

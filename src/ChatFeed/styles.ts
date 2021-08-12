@@ -6,7 +6,7 @@ export default {
     overflow: 'hidden',
   },
   chatHistory: { overflow: 'auto' },
-  chatbubbleWrapper: {
+  chatBubbleWrapper: {
     marginTop: 10,
     marginBottom: 10,
     overflow: 'auto',

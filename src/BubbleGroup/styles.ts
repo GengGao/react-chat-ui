@@ -1,5 +1,5 @@
 export default {
-  chatbubbleWrapper: {
+  chatBubbleWrapper: {
     marginTop: 10,
     marginBottom: 10,
     overflow: 'auto',

@@ -1,5 +1,5 @@
 /**
- * A statndardized message object for use
+ * A standardized message object for use
  * in rendering messages in the chat feed.
  */
 

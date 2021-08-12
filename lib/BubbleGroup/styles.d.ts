@@ -1,5 +1,5 @@
 declare const _default: {
-    chatbubbleWrapper: {
+    chatBubbleWrapper: {
         marginTop: number;
         marginBottom: number;
         overflow: string;

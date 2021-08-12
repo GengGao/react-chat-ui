@@ -4,7 +4,7 @@ import styles from './styles';
 
 const defaultBubbleStyles = {
   userBubble: {},
-  chatbubble: {},
+  chatBubble: {},
   text: {},
 };
 
@@ -16,40 +16,43 @@ export default class ChatBubble extends React.Component {
   }
 
   public render() {
-    const { bubblesCentered } = this.props;
+    const { bubblesCentered, callback } = this.props;
     let { bubbleStyles } = this.props;
     bubbleStyles = bubbleStyles || defaultBubbleStyles;
-    const { userBubble, chatbubble, text } = bubbleStyles;
+    const { userBubble, chatBubble, text } = bubbleStyles;
 
     // message.id 0 is reserved for blue
     const chatBubbleStyles =
       this.props.message.id === 0
         ? {
-            ...styles.chatbubble,
-            ...bubblesCentered ? {} : styles.chatbubbleOrientationNormal,
-            ...chatbubble,
+            ...styles.chatBubble,
+            ...bubblesCentered ? {} : styles.chatBubbleOrientationNormal,
+            ...chatBubble,
             ...userBubble,
           }
         : {
-            ...styles.chatbubble,
-            ...styles.recipientChatbubble,
+            ...styles.chatBubble,
+            ...styles.recipientChatBubble,
             ...bubblesCentered
               ? {}
-              : styles.recipientChatbubbleOrientationNormal,
+              : styles.recipientChatBubbleOrientationNormal,
             ...userBubble,
-            ...chatbubble,
+            ...chatBubble,
           };
 
     return (
       <div
         style={{
-          ...styles.chatbubbleWrapper,
+          ...styles.chatBubbleWrapper,
         }}
       >
         <div style={chatBubbleStyles}>
           <p style={{ ...styles.p, ...text }}>{this.props.message.message}</p>
           {this.props.message.files && <ul>{this.props.message.files.map((file) => {
-            return <li>{file.fileName}</li>
+            return <li><a href="#" onClick={(e) => {
+              e.preventDefault();
+              if(callback) callback(file);
+            }}></a>{file.fileName}</li>
           })}</ul>}
         </div>
       </div>

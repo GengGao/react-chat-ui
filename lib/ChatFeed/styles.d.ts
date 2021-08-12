@@ -8,7 +8,7 @@ declare const _default: {
     chatHistory: {
         overflow: string;
     };
-    chatbubbleWrapper: {
+    chatBubbleWrapper: {
         marginTop: number;
         marginBottom: number;
         overflow: string;

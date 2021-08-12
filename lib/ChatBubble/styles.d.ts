@@ -1,8 +1,8 @@
 declare const _default: {
-    chatbubbleWrapper: {
+    chatBubbleWrapper: {
         overflow: string;
     };
-    chatbubble: {
+    chatBubble: {
         backgroundColor: string;
         borderRadius: number;
         marginTop: number;
@@ -16,13 +16,13 @@ declare const _default: {
         paddingRight: number;
         width: string;
     };
-    chatbubbleOrientationNormal: {
+    chatBubbleOrientationNormal: {
         float: string;
     };
-    recipientChatbubble: {
+    recipientChatBubble: {
         backgroundColor: string;
     };
-    recipientChatbubbleOrientationNormal: {
+    recipientChatBubbleOrientationNormal: {
         float: string;
     };
     p: {
