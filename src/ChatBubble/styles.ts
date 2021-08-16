@@ -26,7 +26,7 @@ export default {
     float: 'left',
   },
   p: {
-    color: '#FFFFFF',
+    // color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '300',
     margin: 0,

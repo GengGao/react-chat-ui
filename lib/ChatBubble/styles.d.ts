@@ -26,7 +26,6 @@ declare const _default: {
         float: string;
     };
     p: {
-        color: string;
         fontSize: number;
         fontWeight: string;
         margin: number;

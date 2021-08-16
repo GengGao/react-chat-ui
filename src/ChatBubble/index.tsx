@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ChatBubbleProps from './interface';
 import styles from './styles';
+import fileIcon from './file-alt.svg';
 
 const defaultBubbleStyles = {
   userBubble: {},
@@ -48,14 +49,14 @@ export default class ChatBubble extends React.Component {
       >
         <div style={chatBubbleStyles}>
           <p style={{ ...styles.p, ...text }}>{this.props.message.message}</p>
-          {this.props.message.files && <ul>{this.props.message.files.map((file) => {
-            return <li>
+          {this.props.message.files && <ul style={{paddingLeft: '0'}}>{this.props.message.files.map((file) => {
+            return <li key={file.key}>
               <a href="#" onClick={(e) => {
               e.preventDefault();
               if(callback) {
                 callback(file);
               }
-            }}>{file.fileName}</a>
+            }}><img src={fileIcon} alt="File icon" /> {file.fileName}</a>
             </li>;
           })}</ul>}
         </div>
