@@ -30,5 +30,21 @@ declare const _default: {
         fontWeight: string;
         margin: number;
     };
+    fileIcon: {
+        width: string;
+        verticalAlign: string;
+        marginRight: string;
+        filter: string;
+    };
+    fileIconAlt: {
+        width: string;
+        verticalAlign: string;
+        marginRight: string;
+        filter: string;
+    };
+    ul: {
+        paddingLeft: string;
+        listStyle: string;
+    };
 };
 export default _default;
