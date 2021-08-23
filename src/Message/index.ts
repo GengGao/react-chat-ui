@@ -6,6 +6,7 @@
 interface MessageData {
   id: number | string;
   message: string;
+  createdAt?: string;
   senderName?: string;
   files?: FileInfo[]
 }
@@ -14,6 +15,7 @@ interface FileInfo {
   fileName: string;
   contentType: string;
   key: string;
+  section: string;
 }
 export default class Message {
   /**

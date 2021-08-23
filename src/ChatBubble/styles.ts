@@ -43,5 +43,9 @@ export default {
     marginRight: '4px',
     filter: 'invert(1)',
   },
-  ul: {paddingLeft: '0', listStyle: 'none'}
+  ul: {paddingLeft: '0', listStyle: 'none'},
+  date: {
+    clear: 'both',
+    color: '#9e9e9e',
+  }
 };

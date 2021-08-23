@@ -46,5 +46,9 @@ declare const _default: {
         paddingLeft: string;
         listStyle: string;
     };
+    date: {
+        clear: string;
+        color: string;
+    };
 };
 export default _default;
