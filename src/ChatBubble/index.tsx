@@ -42,6 +42,10 @@ export default class ChatBubble extends React.Component {
             ...chatBubble,
           };
 
+
+    const chatDateStyles = this.props.message.id === 0
+    ? {...styles.date, float: 'right'} : {...styles.date, float: 'left'};
+
     const chatFileStyles = this.props.message.id === 0 ? styles.fileIcon: styles.fileIconAlt;
 
     return (
@@ -63,8 +67,8 @@ export default class ChatBubble extends React.Component {
             </li>;
           })}</ul>}
         </div>
-        <p style={styles.date}>
-        <Moment format="LLLL">{this.props.message.createdAt}</Moment>
+        <p style={chatDateStyles}>
+        <Moment format="lll">{this.props.message.createdAt}</Moment>
         </p>
       </div>
     );
