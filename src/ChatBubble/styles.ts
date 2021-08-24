@@ -47,5 +47,6 @@ export default {
   date: {
     clear: 'both',
     color: '#9e9e9e',
+    fontSize: '12px'
   }
 };
