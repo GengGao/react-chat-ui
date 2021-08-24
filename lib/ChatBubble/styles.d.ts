@@ -49,6 +49,7 @@ declare const _default: {
     date: {
         clear: string;
         color: string;
+        fontSize: string;
     };
 };
 export default _default;

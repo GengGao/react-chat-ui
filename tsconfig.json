@@ -9,6 +9,7 @@
     "removeComments": true,
     "sourceMap": true,
     "declaration": true,
+    "esModuleInterop": true,
     "jsx": "react"
   },
   "include": ["src/**/*.ts"],

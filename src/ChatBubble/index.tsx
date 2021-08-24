@@ -4,6 +4,7 @@ import styles from './styles';
 import fileIcon from './file-alt.svg';
 import Moment from 'react-moment';
 
+
 const defaultBubbleStyles = {
   userBubble: {},
   chatBubble: {},
