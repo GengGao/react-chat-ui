@@ -16,6 +16,7 @@ export default class Message {
     message: string;
     senderName?: string;
     files?: FileInfo[];
+    createdAt?: string;
     constructor(messageData: MessageData);
 }
 export {};
