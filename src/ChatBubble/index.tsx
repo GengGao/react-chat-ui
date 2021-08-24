@@ -68,9 +68,9 @@ export default class ChatBubble extends React.Component {
             </li>;
           })}</ul>}
         </div>
-        <p style={chatDateStyles}>
+        {this.props.message.createdAt && <p style={chatDateStyles}>
         <Moment format="lll">{this.props.message.createdAt}</Moment>
-        </p>
+        </p>}
       </div>
     );
   }
