@@ -35,13 +35,13 @@ export default {
     width: '15px',
     verticalAlign: 'middle',
     marginRight: '4px',
-    filter: 'filter: invert(49%) sepia(98%) saturate(391%) hue-rotate(126deg) brightness(99%) contrast(91%)',
+    filter: 'invert(49%) sepia(98%) saturate(391%) hue-rotate(126deg) brightness(99%) contrast(91%)',
   },
   fileIconAlt: {
     width: '15px',
     verticalAlign: 'middle',
     marginRight: '4px',
-    filter: 'invert(1)',
+    filter: 'invert(49%) sepia(98%) saturate(391%) hue-rotate(126deg) brightness(99%) contrast(91%)',
   },
   ul: {paddingLeft: '0', listStyle: 'none'},
   date: {
