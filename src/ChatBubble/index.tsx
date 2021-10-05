@@ -56,6 +56,9 @@ export default class ChatBubble extends React.Component {
         }}
       >
         <div style={chatBubbleStyles}>
+        {this.props.message.senderName && <h5>
+                {this.props.message.senderName}
+              </h5>}
           <p style={{ ...styles.p, ...text }}>{this.props.message.message}</p>
           {this.props.message.files && <ul style={styles.ul}>{this.props.message.files.map((file) => {
             return <li key={file.key}>
@@ -64,13 +67,14 @@ export default class ChatBubble extends React.Component {
               if(callback) {
                 callback(file);
               }
-            }}><img src={fileIcon} alt="File icon" style={chatFileStyles} /> {file.fileName}</a>
+            }}><b><img src={fileIcon} alt="File icon" style={chatFileStyles} /> {file.fileName}</b></a>
             </li>;
           })}</ul>}
-        </div>
+
         {this.props.message.createdAt && <p style={chatDateStyles}>
         <Moment format="lll">{this.props.message.createdAt}</Moment>
         </p>}
+        </div>
       </div>
     );
   }
