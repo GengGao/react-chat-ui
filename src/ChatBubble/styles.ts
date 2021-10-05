@@ -5,9 +5,9 @@ export default {
   chatBubble: {
     backgroundColor: '#0084FF',
     borderRadius: 20,
-    marginTop: 1,
+    marginTop: 10,
     marginRight: 'auto',
-    marginBottom: 1,
+    marginBottom: 10,
     marginLeft: 'auto',
     maxWidth: 425,
     paddingTop: 8,

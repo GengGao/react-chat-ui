@@ -76,7 +76,7 @@ export default class ChatBubble extends React.Component {
         </p>}
         </div>
 
-        <br/>
+
       </div>
     );
   }
