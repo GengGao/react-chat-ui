@@ -2,7 +2,7 @@ import * as React from 'react';
 import ChatBubbleProps from './interface';
 import styles from './styles';
 import fileIcon from './file-alt.svg';
-import Moment from 'react-moment';
+import { format } from 'date-fns/format';
 
 
 const defaultBubbleStyles = {
@@ -72,7 +72,7 @@ export default class ChatBubble extends React.Component {
           })}</ul>}
 
         {this.props.message.createdAt && <p style={chatDateStyles}>
-        <Moment format="lll">{this.props.message.createdAt}</Moment>
+        {format(this.props.message.createdAt, 'MMM d, yyyy h:mm a')}
         </p>}
         </div>
 
